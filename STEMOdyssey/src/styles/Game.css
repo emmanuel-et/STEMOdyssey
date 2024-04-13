@@ -1,0 +1,106 @@
+main {
+    display: grid;
+    grid-template-rows: min-content min-content min-content 1fr;
+    padding: 10rch;
+}
+
+main * {
+    font-size: 1.25em;
+}
+
+main > button {
+    width: min-content;
+    align-self: right;
+    cursor: pointer;
+}
+
+main .action {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .question {
+    display: grid;
+    place-content: center;
+    padding: 10rch;
+    gap: 10rch;
+    place-items: center;
+}
+
+main .question > span {
+    font-weight: 500;
+}
+
+main .question div:has(> .option) {
+    justify-self: start;
+    display: grid;
+    gap: 0.5ex;
+    width: 100%;
+}
+
+
+main .question .option {
+    background: #f0f0f0;
+    padding: 0.5ex;
+    box-sizing: content-box;
+    border-radius: 0.25ex;
+    display: flex;
+    gap: 1ch;
+}
+
+
+main .question .option input {
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+main .question div:has(> .correct) .option {
+    background-color: rgba(255, 0, 0, 0.498);
+}
+
+main .question div:has(> .correct) .option.correct {
+    background-color: rgba(0, 128, 0, 0.509);
+}
+
+.timeCount {
+    margin-left: -200px;
+}
+
+.timer{
+    width: 80%;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 600px;
+    min-width: 300px;
+    border-radius: 12px;
+}
+
+.close-modal {
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    background-color: greenyellow;
+    border-radius: 12px;
+}

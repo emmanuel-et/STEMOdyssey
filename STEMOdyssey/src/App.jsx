@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom';
 import './styles/App.css'
 import HomePage from './pages/HomePage';
-import { MathGame } from './pages/MathGame';
+import { MathGame, CSGame } from './pages/MathGame';
 
 function App() {
 
@@ -9,10 +9,12 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/" element={<MathGame />} /> */}
+        <Route path="/math" element={<MathGame />} />
+        <Route path="/cs" element={<CSGame />} />
       </Routes>
     </>
   )
 }
 
 export default App
+  
